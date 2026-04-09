@@ -1,0 +1,496 @@
+/* Contact section update for Cassa Vecchia */
+
+.contact-form-wrap {
+  min-height: 500px;
+}
+
+.contact-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+#contact-form #form-submit {
+  float: none;
+  flex: 0 0 auto;
+  margin-right: 0;
+}
+
+.contact-inline-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact-inline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: #238c87;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-inline-btn:hover,
+.contact-inline-btn:focus {
+  background: #f29f05;
+  color: #111;
+  text-decoration: none;
+}
+
+.contact-map-link {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+}
+
+.contact-map-link:hover,
+.contact-map-link:focus {
+  text-decoration: none;
+}
+
+.contact-right-content.map-overlay-panel {
+  position: relative;
+  min-height: 500px;
+  width: 100%;
+  padding: 60px 28px;
+  background: url('../img/section-salerno-sunset.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.contact-right-content.map-overlay-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(242, 159, 5, 0.78);
+}
+
+.contact-map-link:hover .contact-right-content.map-overlay-panel,
+.contact-map-link:focus .contact-right-content.map-overlay-panel {
+  transform: scale(1.02);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.contact-map-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+.contact-map-icon {
+  width: 142px;
+  height: 142px;
+  margin: 0 auto 30px;
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 68px;
+}
+
+.contact-map-content h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #fff;
+}
+
+/* Desktop: force equal height between form and Maps panel */
+@media (min-width: 992px) {
+  .contact-us .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .contact-us .col-md-8,
+  .contact-us .col-md-4 {
+    float: none;
+    display: flex;
+  }
+
+  .contact-form-wrap,
+  .contact-map-link,
+  .contact-right-content.map-overlay-panel {
+    height: 100%;
+  }
+
+  .contact-right-content.map-overlay-panel,
+  .contact-form-wrap {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .contact-right-content.map-overlay-panel,
+  .contact-form-wrap {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .contact-actions-row {
+    align-items: flex-start;
+  }
+
+  .contact-inline-links {
+    gap: 10px;
+  }
+
+  .contact-inline-btn {
+    padding: 11px 18px;
+  }
+
+  .contact-us .row,
+  .contact-us .col-md-8,
+  .contact-us .col-md-4 {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-actions-row,
+  .contact-inline-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #contact-form #form-submit,
+  .contact-inline-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-right-content.map-overlay-panel {
+    min-height: 320px;
+    padding: 40px 24px;
+  }
+
+  .contact-map-icon {
+    width: 116px;
+    height: 116px;
+    margin-bottom: 22px;
+    font-size: 56px;
+  }
+
+  .contact-map-content h4 {
+    font-size: 16px;
+  }
+}
+
+/* =====================================
+   LAYOUT DESKTOP / LAPTOP / TABLET LANDSCAPE
+   ===================================== */
+
+@media (min-width: 992px) {
+  .banner .container-fluid,
+  .best-offer .container-fluid,
+  .testimonial .container-fluid,
+  .contact-us .container-fluid,
+  footer .container-fluid {
+    width: min(1360px, calc(100% - 80px));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .events .inner-container {
+    width: min(1360px, calc(100% - 80px));
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .banner > .container-fluid > .row,
+  .best-offer > .container-fluid > .row,
+  .testimonial > .container-fluid > .row,
+  .contact-us > .container-fluid > .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .banner > .container-fluid > .row > [class*="col-"],
+  .best-offer > .container-fluid > .row > [class*="col-"],
+  .testimonial > .container-fluid > .row > [class*="col-"],
+  .contact-us > .container-fluid > .row > [class*="col-"] {
+    float: none;
+    display: flex;
+  }
+
+  .contact-form-wrap .row {
+    display: block;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .left-banner-content,
+  .right-banner-content,
+  .best-offer-left-content,
+  .best-offer-right-content,
+  .testimonial-image,
+  .reviews-wrap,
+  .contact-form-wrap,
+  .contact-map-link,
+  .contact-right-content.map-overlay-panel {
+    width: 100%;
+    height: 100%;
+  }
+
+  .best-offer-right-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .best-offer-grid {
+    display: flex;
+    align-items: stretch;
+    flex: 1;
+  }
+
+  .best-offer-grid > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .best-offer-media img {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    max-height: none;
+    object-fit: cover;
+  }
+
+  .reviews-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .review-dots-wrap {
+    position: relative;
+    z-index: 2;
+    margin-top: 24px;
+    padding-bottom: 4px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1366px) {
+  .left-banner-content,
+  .right-banner-content,
+  .best-offer-left-content,
+  .best-offer-right-content,
+  .testimonial-image,
+  .reviews-wrap,
+  .contact-form-wrap,
+  .contact-right-content.map-overlay-panel {
+    min-height: 0;
+  }
+
+  .left-banner-content {
+    padding: 72px 56px;
+  }
+
+  .left-banner-content .text-content {
+    max-width: 100%;
+  }
+
+  .left-banner-content h6 {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+
+  .left-banner-content h1 {
+    font-size: 62px;
+    line-height: 1;
+  }
+
+  .left-banner-content p {
+    font-size: 18px;
+  }
+
+  .right-banner-content {
+    padding: 52px 30px;
+  }
+
+  .logo-extended img {
+    width: 280px;
+    max-width: 100%;
+  }
+
+  .right-banner-content h2 {
+    font-size: 40px;
+  }
+
+  .right-banner-content .line-dec {
+    max-width: 240px;
+  }
+
+  .right-banner-content p {
+    max-width: 100%;
+  }
+
+  .best-offer-left-content {
+    padding: 38px 26px;
+  }
+
+  .best-offer-left-content h4 {
+    font-size: 46px;
+  }
+
+  .best-offer-right-content {
+    padding: 48px 30px;
+  }
+
+  .best-offer-copy h2 {
+    font-size: 38px;
+  }
+
+  .gallery-heading h2,
+  .reviews-big,
+  .services-intro h2,
+  .section-contact-title {
+    font-size: 46px;
+  }
+
+  .gallery-carousel-wrap,
+  .reviews-fade-carousel {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .gallery-slide img {
+    height: 250px;
+  }
+
+  .reviews-wrap {
+    padding: 56px 30px;
+  }
+
+  .services .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .services .col-md-3 {
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .flip-container,
+  .front,
+  .back {
+    height: 300px;
+  }
+
+  .front,
+  .back {
+    padding: 24px 18px;
+  }
+
+  .front .icon {
+    width: 88px;
+    height: 88px;
+    font-size: 34px;
+    margin-bottom: 18px;
+  }
+
+  .front h4 {
+    font-size: 24px;
+  }
+
+  .back p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 991px) {
+  .contact-actions-row {
+    align-items: flex-start;
+  }
+
+  .contact-inline-links {
+    gap: 10px;
+  }
+
+  .contact-inline-btn {
+    padding: 11px 18px;
+  }
+
+  .gallery-carousel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-slide img {
+    height: 260px;
+  }
+
+  .review-dots-wrap {
+    position: relative;
+    z-index: 2;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-actions-row,
+  .contact-inline-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #contact-form #form-submit,
+  .contact-inline-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-right-content.map-overlay-panel {
+    min-height: 320px;
+    padding: 40px 24px;
+  }
+
+  .contact-map-icon {
+    width: 116px;
+    height: 116px;
+    margin-bottom: 22px;
+    font-size: 56px;
+  }
+
+  .contact-map-content h4 {
+    font-size: 16px;
+  }
+}
